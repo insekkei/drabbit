@@ -1,0 +1,412 @@
+/*index CSS*/
+body{
+background:#f7f7f7 url(../images/pinstripe.gif) repeat top left;
+color:#543019;
+font-family: Georgia, "Times New Roman","微软雅黑","WenQuanYi Zen Hei";
+font-size:14px;
+line-height:1.77em;
+overflow:hidden;
+}
+/***********背景云*************/
+#clouds{
+width:100%;
+height:auto;
+position:absolute;
+top:0;
+left:0;
+background: transparent url(../images/clouds.png) repeat 0 0;
+z-index:1;
+}
+/**************倒计时牌*****************/
+.deco{
+width:200px;
+text-align:center;
+position:fixed;
+text-shadow:-2px 2px 2px #000;
+z-index:10;
+}
+#days{
+color:#f89d57;
+font-size:14px;
+padding:18px 14px;
+margin:0 10px;
+background-color:#543019;
+box-shadow:-3px 2px 1px #000;
+-webkit-box-shadow:-3px 2px 1px #000;
+-moz-box-shadow:-3px 2px 1px #000;
+transform:rotate(-5deg);
+-o-transform:rotate(-5deg);
+-webkit-transform:rotate(-5deg);
+-moz-transform:rotate(-5deg);
+-ms-transform:rotate(-5deg);
+position:relative;
+top:-10px;
+}
+
+#days span{
+text-align:center;
+font-size:24px;
+}
+#rope{
+width:50%;
+margin:0 auto;
+height:75px;
+border-left:3px solid #543019;
+border-right:3px solid #543019;
+background:transparent url(../images/tang.png) no-repeat top center ;
+}
+
+/***************导航按钮******************/
+#nav{
+position:fixed;
+right:2em;
+z-index:9;
+}
+#nav li{
+list-style:none;
+width:60px;
+height:60px;
+padding:2px;
+border-radius:34px;
+background-color:#f89d57;
+margin:2em;
+}
+#nav li.active{
+background-color:#BCE7F0;
+}
+#nav li a{
+color:#fff;
+display:inline-block;
+width:58px;
+height:58px;
+font-size:16px;
+font-weight:bold;
+line-height:58px;
+text-align:center;
+border-radius:30px;
+border:1px dashed #fff;
+}
+#nav li a:hover{
+moz-box-shadow: 0 0  10px #aaa;
+-webkit-box-shadow: 0 0  10px #aaa;
+box-shadow: 0 0  10px #aaa;
+transition:all .5s ease-out;
+-moz-transition:all .5s ease-out;
+-webkit-transition:all .5s ease-out;
+-o-transition:all .5s ease-out;
+-ms-transition:all .5s ease-out;
+}
+
+/****************屏内滚动*******************/
+.wrapper{
+overflow-x:hidden;
+overflow-y:auto;
+}
+/*******************内容区域**********************/
+.content{
+width:800px;
+margin:0 auto;
+padding:20px 0;
+}
+
+/***************about部分**********************/
+.content h2,.content .p{
+margin:0;
+}
+.content h2{
+font-size:1.5em;
+font-weight:bold;
+}
+#about h2,#about .p{
+text-align:center;
+}
+.content .p{
+margin-bottom:2em;
+font-size:14px;
+font-style:italic;
+}
+.content .katute{
+width:48.5%;
+margin:0;
+float:left;
+}
+.wanglong{
+padding-right:1%;
+text-align:center;
+}
+
+.wanglong p{
+font-size:14px;
+line-height:1.77em;
+margin:1em 0 0 4em;
+color:#8fb9c2;
+}
+.wanglong p:first-child{
+margin-top:3em;
+}
+.hancong{
+padding-left:1%;
+}
+.hancong img{
+width:450px;
+}
+.blank{
+display:inline-block;
+width:2.2em;
+}
+.clear{clear:both;height:0;}
+/****************loc部分***********************/
+#loc .map img,iframe{
+-moz-box-shadow:1px 1px 7px #777;
+-webkit-box-shadow:1px 1px 7px #777;
+box-shadow:1px 1px 7px #777;
+}
+#loc .map img,iframe{
+opacity:.6;
+cursor:pointer;
+}
+.placeinfo a img{
+position:relative;
+top:4px;
+}
+#wishes .content .wishp{
+padding:.5em;
+border:1px solid #ddd;
+background:rgba(0,0,0,.6);
+color:#fff;
+}
+a{text-decoration:none;color:#666;}
+
+/***************滚动条样式******************/
+::-webkit-scrollbar {
+width:0;
+}
+
+::-webkit-scrollbar-track {
+-webkit-box-shadow:0 0 1px #000;
+-webkit-border-radius: 10px;
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+-webkit-border-radius: 10px;
+border-radius: 10px;
+background: #ddd;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+background: #eee;
+}
+
+/**************600～899分辨率下显示*************/
+@media screen and (min-width: 600px) and (max-width:899px){
+body{
+margin-bottom:60px;
+overflow-y:auto;
+}
+.wrapper{
+width:500px;
+}
+.content{
+width:480px;
+padding:10px;
+}
+.deco{
+text-align:center;
+position:absolute;
+left:0;
+top:0;
+text-shadow:-2px 2px 2px #000;
+}
+#nav{
+right:0;
+}
+.hancong{
+clear:both;
+}
+.content .katute{
+width:100%;
+}
+.wanglong h2{
+margin-top:2em;
+}
+.wanglong p{
+line-height:1.3em;
+}
+.hancong img{
+width:480px;
+}
+
+#loc .map img{
+width:480px;
+}
+
+#wishes .content{
+margin-top:150px;
+}
+}
+/**************768～899分辨率下显示*************/
+@media screen and (min-width: 768px) and (max-width:899px){
+.wrapper{
+width:768px;
+}
+.content{
+width:748px;
+padding:10px;
+}
+}
+
+/**************240～599px分辨率下显示*************/
+@media screen and (min-width: 240px) and (max-width:599px){
+body{
+margin-bottom:60px;
+overflow-y:auto;
+}
+.wrapper{
+width:320px;
+}
+.content{
+width:300px;
+padding:10px;
+}
+#clouds{
+background:none;
+}
+.deco{
+width:100%;
+text-align:left;
+position:relative;
+text-shadow:0 0 0 transparent;
+border-bottom:1px dotted #aaa;
+}
+
+#days{
+font-size:16px;
+padding:8px 10px;
+margin:0;
+top:0;
+box-shadow:0 0 0 transparent;
+-webkit-box-shadow:0 0 0 transparent;
+-moz-box-shadow:0 0 0 transparent;
+transform:rotate(0);
+-o-transform:rotate(0);
+-webkit-transform:rotate(0);
+-moz-transform:rotate(0);
+-ms-transform:rotate(0);
+}
+#rope{
+display:none;
+}
+#nav{
+width:100%;
+bottom:0;
+right:0;
+text-align:center;
+z-index:2;
+}
+#nav li{
+list-style:none;
+width:20%;
+height:42px;
+border-radius:0;
+background-color:#f89d57;
+padding:0;
+float:left;
+margin:0;
+}
+#nav li a{
+color:#fff;
+display:inline-block;
+width:58px;
+height:40px;
+line-height:40px;
+text-align:center;
+border-radius:0;
+border:0;
+}
+.hancong{
+clear:both;
+}
+.content .katute{
+width:100%;
+}
+#about h2,#about .p,.wanglong{
+text-align:left;
+}
+#about h2{
+margin-top:2em;
+}
+.blank{
+width:1em;
+}
+.content .p{
+margin-bottom:0;
+padding-left:0;
+}
+.wanglong p{
+line-height:1.5em;
+margin-left:0;
+}
+.wanglong p:first-child{
+margin-top:1em;
+}
+.hancong img,.map img{
+width:300px;
+}
+#wishes .content{
+padding-top:5em;
+}
+}
+
+@media screen and (min-width: 240px) and (max-width:319px){
+.wrapper{
+width:240px;
+}
+.content{
+width:220px;
+padding:10px;
+}
+.hancong img,.map img{
+width:240px;
+}
+}
+
+@media screen and (min-width: 384px) and (max-width:479px){
+.wrapper{
+width:384px;
+}
+.content{
+width:364px;
+padding:10px;
+}
+.hancong img,.map img{
+width:364px;
+}
+}
+
+@media screen and (min-width: 480px) and (max-width:567px){
+.wrapper{
+width:480px;
+}
+.content{
+width:460px;
+padding:10px;
+}
+.hancong img,.map img{
+width:460px;
+}
+}
+
+@media screen and (min-width: 568px) and (max-width:599px){
+.wrapper{
+width:568px;
+}
+.content{
+width:548px;
+padding:10px;
+}
+.hancong img,.map img{
+width:548px;
+}
+}
+
