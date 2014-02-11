@@ -24,7 +24,7 @@ $(function(){
 	if (time >= 1){
 	//写入天数到指定位置
 	$('#days span').html(time);
-	}else{$('#days').html('婚礼已结束');}
+	}else{$('#days').html('婚礼已结束，谢谢！');}
 	
 	/*页面平滑滚动效果，并为当前页面对应的导航链接添加active类*/
 	$("#nav a").click(function(e){
