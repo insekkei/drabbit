@@ -21,9 +21,10 @@ $(function(){
 	//根据时间差计算天数
 	var date = timedate.getTime() - now.getTime();    
 	var time = Math.floor(date / (1000 * 60 * 60 * 24));    
-	if (time >= 0) ;   
+	if (time >= 1){
 	//写入天数到指定位置
 	$('#days span').html(time);
+	}else{$('#days').html('婚礼已结束');}
 	
 	/*页面平滑滚动效果，并为当前页面对应的导航链接添加active类*/
 	$("#nav a").click(function(e){
