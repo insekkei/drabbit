@@ -28,6 +28,7 @@ $(function(){
 	
 	/*页面平滑滚动效果，并为当前页面对应的导航链接添加active类*/
 	$("#nav a").click(function(e){
+		e.preventDefault();
 		//获取当前链接地址
 		var href = $(this).attr("href");
 		var pos = $(href).offset().top;
@@ -50,6 +51,7 @@ $(function(){
 	var target='';
 	
 	$(".placeinfo a").click(function(e){
+		e.preventDefault();
         	var href = $(this).attr("href");
         	var pos = $(href).offset().top;
 		
