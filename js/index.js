@@ -31,15 +31,18 @@ $(function(){
 		//获取当前链接地址
 		var href = $(this).attr("href");
 		var pos = $(href).offset().top;
+		if($(this).attr('class')!='wishnav'){
+			e.preventDefault();
+		}
 		//给当前链接的li添加active类，并删除同级其它li的active类
        		$(this).parent('li')
           		.addClass("active")
           		.siblings().removeClass("active");
 		//平滑滚动，时间为1秒  
         	$("html,body").animate({scrollTop: pos}, 1000, 'easeInOutExpo',function(){
-        	});
-		//改变url的值但并不刷新页面
-		location.hash = href;
+        		//改变url的值但并不刷新页面
+			location.hash = href;
+		});
         	return false;
     	});
 	
@@ -50,6 +53,7 @@ $(function(){
 	var target='';
 	
 	$(".placeinfo a").click(function(e){
+		e.preventDefault();
         	var href = $(this).attr("href");
         	var pos = $(href).offset().top;
 		
